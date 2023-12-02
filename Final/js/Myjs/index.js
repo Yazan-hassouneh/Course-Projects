@@ -1,0 +1,1 @@
+let closeSlider=document.getElementById("closeImgSlider"),opeanSlider=document.querySelectorAll(".gallery button"),Slider=document.getElementById("ImgSlider");opeanSlider.forEach(e=>{e.addEventListener("click",()=>{Slider.classList.add("show")})}),closeSlider.onclick=()=>{Slider.classList.remove("show")};

@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Assets/TitleIcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Dosis:wght@200;300;400;500;600;700&family=Raleway:wght@400;500;600;700&family=Roboto:ital,wght@0,500;0,700;0,900;1,100;1,300;1,400;1,700&family=Spectral+SC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrab && fontAwesome -->
+    <link rel="stylesheet" href="./style/bootstrab/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/fontAwesome/all.min.css">
+    <!-- index Style -->
+    <link rel="stylesheet" href="./style/css/normalStyle/indexStyle.css">
+    <link rel="stylesheet" href="./style/css/normalStyle/globalStyle.css">
+    <!-- indexEffects file contain hover && animation Effects -->
+    <link rel="stylesheet" href="./style/css/effects/indexEffects.css">
+    <link rel="stylesheet" href="./style/css/effects/globalEffect.css">
+    <!-- Media Quary -->
+    <link rel="stylesheet" href="./style/css/mediaQuery/indexQuery.css">
+    <link rel="stylesheet" href="./style/css/mediaQuery/globalQuery.css">
+    <!-- Cart -->
+    <link rel="stylesheet" href="style/css/normalStyle/cart.css">
+    <title>Hungrybuzz</title>
+</head>
+<body>
+    <div id="cart" class="cart position-absolute top-0 end-0 h-100 w-100 d-flex justify-content-end overflow-hidden">
+        <div class="cartContent ">
+            <div class=" border-bottom border-1 fw-bold">
+                <div class="d-flex justify-content-between align-items-center px-1 py-3">
+                    <p id="NumberOfItems" class="text-white text-uppercase m-0 fs-4">Carts (12)</p>
+                    <button id="closeCart" class="border-0 bg-transparent text-white fs-2 px-2">x</button>
+                </div>
+                <div id="price" class="text-white ps-1 pb-3 text-uppercase fs-5"></div>
+            </div>
+            <div id="items" class="items d-flex flex-column justify-content-start align-items-center h-100 overflow-scroll" data-src="">
+            </div>
+        </div>
+    </div>
+    <nav class="NavHolder ">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+                <div class="container-fluid py-2">
+                    <div class="NavIcons d-lg-flex flex-column gap-2">
+                        <button id="cartbtn" class="cartbtn bg-transparent text-white p-0 border-0 position-relative " data-items="2"><i class="fa-solid fa-basket-shopping fs-4"></i></button>
+                        <a href="html/wishlist.html"><i class="fa-regular fa-heart fs-4 d-lg-block d-none"></i></a>
+                    </div>
+                    <div class="img-container resturant-logo d-flex justify-content-lg-center mx-2 d-lg-none">
+                        <a href="index.html"><img src="Assets/logo.png" alt="logo" class="h-100 w-100"></a>
+                    </div>
+                    <button  class="navbar-toggler rounded-0 border-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white-50 burger-icon d-flex align-items-center justify-content-around flex-column py">
+                            <span ></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse p-lg-0 p-3" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-lg-auto align-items-lg-center mainUl">
+                            <li class="nav-item mx-2 current-page mt-lg-0 mt-4">
+                                <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-white " href="html/about.html">About</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-white" href="./html/menu.html">Menu</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-white" href="./html/team.html">Team</a>
+                            </li>
+                            <li class="nav-item img-container resturant-logo d-flex justify-content-lg-center mx-2 my-lg-4 my-0 order-lg-0 order-first">
+                                <a href="index.html"><img src="Assets/logo.png" alt="logo" class="h-100 w-100"></a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-white" href="./html/gallary.html">Gallary</a>
+                            </li>
+                            <li class="nav-item mx-2 shop position-relative d-flex flex-column">
+                                <a class="nav-link text-white" href="#">Shop</a>
+                                <ul class="d-block p-0 ">
+                                    <li class="border-bottom border-1"><span></span><a class="nav-link text-white w-100 p-3 " href="html/shop.html">Our Products</a></li>
+                                    <li class="border-bottom border-1"><span></span><a class="nav-link text-white w-100 p-3 " href="html/wishlist.html">Wishlist</a></li>
+                                    <li class="border-bottom border-1"><span></span><a class="nav-link text-white w-100 p-3 " href="html/account.html">My Account</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-white" href="./html/blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link text-white" href="./html/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-none second border-0 opacity-50"></div>
+                    <div id="opean" class="signBar d-lg-flex flex-column justify-content-around  d-none">
+                        <span class="w-75 bg-white"></span>
+                        <span class="w-50 bg-white"></span>
+                        <span class="w-25 bg-white"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <section class="reserveTable position-fixed w-100 h-100 top-0 start-0 bg-black justify-content-center">
+        <div id="close" class="close position-absolute text-white d-flex justify-content-center align-items-center"><span>|</span><span>|</span></div>
+        <div class="h-100 p-2 p-md-5">
+            <div class="sub-head text-center ">
+                <div class="my-2"><img src="Assets/moustache.png" alt="moustache"></div>
+                <h2 class="text-white h2-custome">Reserve Your Table</h2>
+            </div>
+            <form action="" class="mt-5 justify-content-center m-0 ">
+                <div class="my-3">
+                    <label for="name" class="d-block text-white mb-1 w-100 but-font">Your Name</label>
+                    <input type="text" name="name" id="name" placeholder="Ex: John Doe" class="w-100 bg-white border">
+                </div>
+                <div class="my-3">
+                    <label for="number" class="d-block text-white mb-1 w-100 but-font">No. of Person</label>
+                    <input type="text" name="number" id="number" placeholder="4" class="w-100 bg-white border">
+                </div>
+                <div class="my-3 dateTimeIcon position-relative">
+                    <label for="date" class="d-block text-white mb-1 w-100 but-font">Date</label>
+                    <input type="text" name="date" id="date" placeholder="Select Date" class="w-100 bg-white border" onfocus="(this.type='date')" onblur="(this.type='text')">
+                </div>
+                <div class="my-3 dateTimeIcon position-relative">
+                    <label for="time" class="d-block text-white mb-1 w-100 but-font">Time  </label>
+                    <input type="text" name="time" id="time" placeholder="Select Tiem" class="w-100 bg-white  border" onfocus="(this.type='time')" onblur="(this.type='text')">
+                </div>
+                <div class="pt-4">
+                    <button type="submit" class="w-100 h-100 text-white border-0 position-relative custom-btn btn-insideEffect but-font">Reserve A Table</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="slider">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active animateSlider" data-bs-interval="2000">
+                    <img src="Assets/slider_1.jpg" class="d-block w-100" alt="slide-one">
+                    <div class="carousel-caption end-0 bottom-0 start-50 translate-middle opacity-0">
+                        <h5>First slide label</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="Assets/slider_2.jpg" class="d-block w-100" alt="slide-two">
+                    <div class="carousel-caption end-0 bottom-0 start-50 translate-middle opacity-0">
+                        <h5>Second slide label</h5>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="Assets/slider_3.jpg" class="d-block w-100" alt="slide-three">
+                    <div class="carousel-caption end-0 bottom-0 start-50 translate-middle opacity-0">
+                        <h5>Third slide label</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="btns position-absolute top-0 h-100 d-flex flex-column justify-content-center align-items-center d-none d-md-flex">
+                <button class=" opacity-100 w-100 border-0 bg-transparent text-white mb-4" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <i class="fa-solid fa-arrow-up"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <div class="carousel-indicators btn-group d-flex justify-content-around flex-column w-100">
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">1</button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2">2</button>
+                    <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3">3</button>
+                </div>
+                <button class="opacity-100 border-0 bg-transparent text-white w-100 mt-4" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="reserve" class="reserve opacity-0">
+        <div class="container">
+            <div>
+                <div class="sub-head text-center ">
+                    <div class="my-2"><img src="Assets/moustache.png" alt="moustache"></div>
+                    <h2 class="text-white h2-custome">Reserve Your Table</h2>
+                    <p>Book a table in advance to enjoy your time with friends & Family</p>
+                </div>
+                <form action="" class="row mt-5 justify-content-center m-0">
+                    <div class="col-md-6 col-lg-3 col-12 my-3">
+                        <label for="name" class="d-block text-white mb-1 w-100 but-font">Your Name</label>
+                        <input type="text" name="name" id="name" placeholder="Ex: John Doe" class="w-100 bg-transparent text-white border">
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-12 my-3">
+                        <label for="number" class="d-block text-white mb-1 w-100 but-font">No. of Person</label>
+                        <input type="text" name="number" id="number" placeholder="4" class="w-100 bg-transparent text-white border">
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-12 my-3 dateTimeIcon position-relative">
+                        <i class="fa-solid fa-calendar-days position-absolute"></i>
+                        <label for="date" class="d-block text-white mb-1 w-100 but-font">Date</label>
+                        <input type="text" name="date" id="date" placeholder="Select Date" class="w-100 bg-transparent text-white border" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-12 my-3 dateTimeIcon position-relative">
+                        <i class="fa-solid fa-clock position-absolute"></i>
+                        <label for="time" class="d-block text-white mb-1 w-100 but-font">Time  </label>
+                        <input type="text" name="time" id="time" placeholder="Select Tiem" class="w-100 bg-transparent text-white border" onfocus="(this.type='time')" onblur="(this.type='text')">
+                    </div>
+                    <div class="col-md-6 col-lg-3 col-12 my-3">
+                        <button type="submit" class="w-100 text-white border-0 position-relative custom-btn btn-insideEffect but-font">Reserve A Table</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about overflow-hidden opacity-0">
+            <div class="container">
+                <div class="row">
+                    <div class="about-contant col-lg-8 col-12 position-relative">
+                        <div class="w-75">
+                            <h2 class="text-white h2-custome">About Us</h2>
+                            <p>Hungrybuzz cooks food as a culnery Art</p>
+                            <p class="my-5">Culinary artists often take inspiration from various cuisines, cultural traditions, and personal experiences to create their own signature dishes.</p>
+                            <div class="position-relative w-50 outerEffect-1 m-auto m-lg-0">
+                                <button class="position-relative w-100 p-2 p-md-3 custom-btn outerEffetc-2 but-font"><a href="./html/about.html" class="text-decoration-none text-white">Learn More</a></button>
+                            </div>
+                        </div>
+                        <img src="Assets/Layer-691-copy-14.png" alt="layer-img" class="layer-img-1 position-absolute ">
+                    </div>
+                    <div class="about-img col-lg-4 col-12 my-5 m-lg-0 position-relative overflow-hidden">
+                        <img src="Assets/Layer-691-copy-14.png" alt="layer-img" class="layer-img-2 position-absolute">
+                        <img src="Assets/6-3.jpg" alt="about-image" class="main-img ">
+                    </div>
+                    <div class="w-50 m-auto position-relative coco-img animateImageCoco">
+                        <div>
+                            <img src="Assets/layer3.png" alt="star" class="star">
+                        </div>
+                        <div>
+                            <img src="Assets/layer4.png" alt="coco" class="coco">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="video" class="video opacity-0 d-flex align-items-center" >
+        <div class="d-flex justify-content-between justify-content-lg-around w-100 align-items-center flex-lg-row flex-column">
+            <h2 class="text-white fs-1 fw-bold my-5 my-lg-0">Watch Hungrybuzz</h2>
+            <div class="position-relative icon-holder">
+                <a href='https://youtu.be/TKnufs85hXk?si=rBpRkCdmKWcoLDwt' target='_blank' class="position-absolute top-50 start-50 translate-middle"><i class='fa-solid fa-play text-white'></i></a>
+            </div>
+            <h2 class="text-white fs-1 fw-bold my-5 my-lg-0">Watch Hungrybuzz</h2>
+        </div>
+    </section>
+    <section id="menu" class="menu opacity-0">
+        <div class="container">
+            <div class="m-auto d-flex align-items-end">
+                <div class="sub-head text-center">
+                    <h2 class="text-white h2-custome">Restaurant Menu</h2>
+                    <p class="fs-5">Find your favourite meal from the delicious options we have</p>
+                </div>
+            </div>
+            <div class="tabList mt-5">
+                <ul class="nav nav-tabs border-0 d-flex justify-content-around my-3" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active bg-transparent border-0" id="main-tab" data-bs-toggle="tab" data-bs-target="#main-tab-pane" type="button" role="tab" aria-controls="main-tab-pane" aria-selected="true">
+                            <i class="fa-solid fa-bowl-rice"></i>
+                            <h6 class="my-4 text-uppercase fw-normal">MAIN COURSE</h6>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link bg-transparent border-0" id="steak-tab" data-bs-toggle="tab" data-bs-target="#steak-tab-pane" type="button" role="tab" aria-controls="steak-tab-pane" aria-selected="false">
+                            <i class="fa-solid fa-bacon"></i>
+                            <h6 class="my-4 text-uppercase fw-normal">steaks</h6>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link bg-transparent border-0" id="snack-tab" data-bs-toggle="tab" data-bs-target="#snack-tab-pane" type="button" role="tab" aria-controls="snack-tab-pane" aria-selected="false">
+                            <i class="fa-solid fa-hotdog"></i>
+                            <h6 class="my-4 text-uppercase fw-normal">Snacks</h6>
+                        </button>   
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link bg-transparent border-0" id="desserts-tab" data-bs-toggle="tab" data-bs-target="#desserts-tab-pane" type="button" role="tab" aria-controls="desserts-tab-pane" aria-selected="false">
+                            <i class="fa-solid fa-cake-candles"></i>
+                            <h6 class="my-4 text-uppercase fw-normal">DESSERTS</h6>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link bg-transparent border-0" id="drinks-tab" data-bs-toggle="tab" data-bs-target="#drinks-tab-pane" type="button" role="tab" aria-controls="drinks-tab-pane" aria-selected="false">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                            <h6 class="my-4 text-uppercase fw-normal">DRINKS</h6>
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="main-tab-pane" role="tabpanel" aria-labelledby="main-tab" tabindex="0">
+                        <ol class="row text-white gap-md-4 justify-content-around" type="01">
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Chicken Avocado Sandwitch</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">210$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Type of sandwich made with chicken and avocado.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Banana Nut Pancakes</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">180$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Delightful breakfast dish made with ripe bananas and chopped nuts.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Swiss Hash Browns</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">100$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Delicious breakfast treat made with mashed bananas and chopped nuts.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Perfect Scrambled Eggs</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">1550$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Method of cooking scrambled eggs that results in a delicious.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Sesame Noodles with Garlic</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">321$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Delicious and flavorful dish made with noodles, sesame oil, and garlic</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Beer-Cheeseburger</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">90$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Delicious and flavorful twist on the classic cheeseburger</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="tab-pane fade" id="steak-tab-pane" role="tabpanel" aria-labelledby="steak-tab" tabindex="0">
+                        <ol class="row text-white gap-md-4 justify-content-around" type="01">
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Juicy Ribeye Delight</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">210$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Mouthwatering ribeye steak cooked to perfection</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Tenderloin Medallions</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">180$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Indulge in the elegance of tenderloin medallions.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Pepper-Crusted Strip Steak</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">100$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">This strip steak is coated in a savory blend of crushed peppercorns.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Chimichurri Skirt Steak</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">1550$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Experience the vibrant flavors of Argentina with this tender and flavorful skirt steak</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Sesame Noodles with Garlic</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">321$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Delicious and flavorful dish made with noodles, sesame oil, and garlic</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Smoky Bourbon Glazed Sirloin</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">90$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Indulge in the rich flavors of a smoky bourbon glaze on a perfectly cooked sirloin steak.r</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="tab-pane fade" id="snack-tab-pane" role="tabpanel" aria-labelledby="snack-tab" tabindex="0">
+                        <ol class="row text-white gap-md-4 justify-content-around" type="01">
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Cheesy Bacon-Stuffed Jalapeno Poppers</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">210$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">These spicy jalapeno poppers are filled with a mixture of melted cheese and crispy bacon.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Crispy Parmesan Zucchini Fries</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">180$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Enjoy a healthier alternative to traditional fries with these crispy zucchini sticks</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Loaded Nachos Supreme</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">100$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Indulge in a mountain of crispy tortilla chips topped with melted cheese</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Buffalo Chicken Wings</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">1550$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">These tangy and spicy chicken wings are coated in a zesty buffalo sauce and served.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Spinach and Artichoke Dip</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">321$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Dive into a creamy and flavorful dip made with a blend of spinach, artichokes, and melted chees.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Mini Sliders with Gourmet Toppings</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">90$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">These bite-sized sliders feature juicy mini patties topped with gourmet ingredients such as caramelized onions, melted cheese, crispy bacon, and tangy barbecue sauce.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="tab-pane fade" id="desserts-tab-pane" role="tabpanel" aria-labelledby="desserts-tab" tabindex="0">
+                        <ol class="row text-white gap-md-4 justify-content-around" type="01">
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Decadent Chocolate Lava Cake</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">210$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Type of sandwich made with chicken and avocado.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Banana Nut Pancakes</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">180$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Indulge in a rich and gooey chocolate lava cake with a molten center that oozes out when you cut into it.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Classic New York Cheesecake</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">100$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Delight in a velvety smooth and creamy New York-style cheesecake with a buttery graham cracker crust.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Homemade Apple Pie</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">1550$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Experience the comforting flavors of a warm apple pie with a flaky crust and a fragrant cinnamon-spiced apple filling.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Sesame Noodles with Garlic</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">321$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Delicious and flavorful dish made with noodles, sesame oil, and garlic</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Fresh Berry Parfait</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">90$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Enjoy layers of juicy berries, creamy yogurt or whipped cream, and crunchy granola in a delightful parfait.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="tab-pane fade" id="drinks-tab-pane" role="tabpanel" aria-labelledby="drinks-tab" tabindex="0">
+                        <ol class="row text-white gap-md-4 justify-content-around" type="01">
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Classic Margarita</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">210$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Sip on a refreshing classic margarita made with tequila, lime juice, and a touch of sweetness from simple syrup or agave nectar. Served on the rocks with a salt-rimmed glass, it's the perfect balance of tart and sweet..</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Strawberry Mojito</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">180$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Cool off with a strawberry mojito, a fruity twist on the classic cocktail. Muddled fresh strawberries, mint leaves, lime juice, and rum come together to create a vibrant and refreshing drink.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Espresso Martin</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">100$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Description: For coffee lovers, an espresso martini is the perfect pick-me-up cocktail. Vodka, coffee liqueur, and a shot of espresso combine to create a sophisticated and energizing drink with a touch of sweetness.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Sparkling Peach Bellini</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">1550$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Raise a glass to celebrate with a sparkling peach bellini. Made with fresh peach puree and chilled prosecco or sparkling wine, this elegant and bubbly cocktail is perfect for brunch or special occasions.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Refreshing Mint Lemonadec</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">321$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Quench your thirst with a refreshing mint lemonade. Freshly squeezed lemon juice, muddled mint leaves, and a hint of sweetness from simple syrup create a tangy and revitalizing drink that's perfect for hot summer days.</p>
+                                </div>
+                            </li>
+                            <li class="col-12 col-md-5 m-3">
+                                <div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <h4 class="fs-5 d-inline pe-3">Fresh Berry Parfait</h4>
+                                        <span class="flex-grow-1 line"></span>
+                                        <span class="ps-3">90$</span>
+                                    </div>
+                                    <p class="fw-semibold my-3">Enjoy layers of juicy berries, creamy yogurt or whipped cream, and crunchy granola in a delightful parfait.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="pb-5 w-75 m-md-auto m-auto grillman">
+                <p class="text-white py-5 text-center fw-light">TastydineRestaurant</p>
+            </div>
+        </div>
+    </section>
+    <section id="seaFood" class="seaFood opacity-0 d-flex justify-content-center align-items-center ">
+        <div class="text-center w-75 m-auto">
+            <h2 class="text-white w-50 m-auto px-xl-4 position-relative but-font">SPECIAL SEA FOOD PLATTER</h2>
+            <div id="seaFoodTopics" class="position-relative ">
+                <div class="my-5 mx-3">
+                    <h5 class="main-color sup-head-font">Lobstar Combo</h5>
+                    <p class="text-white italic but-font">Dish or meal featuring lobster as the main ingredient</p>
+                </div>
+                <div class="my-5 mx-3">
+                    <h5 class="main-color sup-head-font"> Grill Sea Food joint</h5>
+                    <p class="text-white italic but-font">Focusing on providing flavorful and freshly prepared seafood options</p>
+                </div>
+                <div class="my-5 mx-3">
+                    <h5 class="main-color sup-head-font"> Sea Food Buffet</h5>
+                    <p class="text-white italic but-font">Seafood buffets often include a range of dishes</p>
+                </div>
+                <div class="my-5 mx-3">
+                    <h5 class="main-color sup-head-font">Sea Food Platter</h5>
+                    <p class="text-white italic but-font">Consisting of various seafood served together on a large plate</p>
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute border-dashed opacity-0"></div>
+    </section>
+    <section id="our" class="Our opacity-0">
+        <div class="container">
+            <div class="row align-items-center position-relative">
+                <div class="col-lg-6 col-12 my-5 m-lg-0 row ourServices">
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column position-relative">
+                        <h6 class="main-color sup-head-font h4 mb-4">Finest Chef</h6>
+                        <span class="text-white but-font text-center">Lorem ipsum dolor sit amet elit consectetur adipiscing condem incididu ut labore et dolore magna aliqua. ad minim veniam</span>
+                        <div class="layer position-absolute w-100 h-100 text-center d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-martini-glass-empty main-color"></i><h4 class="text-white sup-head-font mt-5">Finest Chef</h4></div>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column position-relative">
+                        <h6 class="main-color sup-head-font h4 mb-4">Beautiful Ambience</h6>
+                        <span class="text-white but-font text-center">Lorem ipsum dolor sit amet elit consectetur adipiscing condem incididu ut labore et dolore magna aliqua. ad minim veniam</span>
+                        <div class="layer position-absolute w-100 h-100 text-center d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-utensils main-color"></i><h4 class="text-white sup-head-font mt-5">Beautiful Ambience</h4></div>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column position-relative">
+                        <h6 class="main-color sup-head-font h4 mb-4">Beautiful Ambience</h6>
+                        <span class="text-white but-font text-center">Lorem ipsum dolor sit amet elit consectetur adipiscing condem incididu ut labore et dolore magna aliqua. ad minim veniam</span>
+                        <div class="layer position-absolute w-100 h-100 text-center d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-plate-wheat main-color"></i><h4 class="text-white sup-head-font mt-5">Beautiful Ambience</h4></div>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center flex-column position-relative">
+                        <h6 class="main-color sup-head-font h4 mb-4">Beautiful Ambience</h6>
+                        <span class="text-white but-font text-center">Lorem ipsum dolor sit amet elit consectetur adipiscing condem incididu ut labore et dolore magna aliqua. ad minim veniam</span>
+                        <div class="layer position-absolute w-100 h-100 text-center d-flex flex-column justify-content-center align-items-center"><i class="fa-solid fa-money-bill-wheat main-color"></i><h4 class="text-white sup-head-font mt-5">Beautiful Ambience</h4></div>
+                    </div>
+                </div>
+                <div class="position-absolute d-none d-lg-block layer-1"><img src="Assets/Layer-691-copy-14.png" alt="layer"></div>
+                <div class="position-absolute d-none d-lg-block layer-2"><img src="Assets/Layer-691-copy-14.png" alt="layer"></div>
+                <div class="Our-contant offset-lg-1 col-lg-5 col-12 position-relative">
+                    <div class="w-75 m-auto m-lg-0">
+                        <h2 class="text-white h2-custome">Our Specialty</h2>
+                        <p class="animateOurPara">Hungrybuzz cooks food as a culnery Art</p>
+                        <p class="my-5">Culinary artists often take inspiration from various cuisines, cultural traditions, and personal experiences to create their own signature dishes.</p>
+                        <div class="position-relative w-50 outerEffect-1 m-auto m-lg-0">
+                            <button class="position-relative w-100 p-2 p-md-3 custom-btn outerEffetc-2 but-font"><a href="./html/about.html" class="text-decoration-none text-white">Learn More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="gallery opacity-0">
+        <div class="container">
+            <div class="m-auto d-flex align-items-end ">
+                <div class="sub-head text-center ">
+                    <h2 class="text-white h2-custome">Photo Gallery</h2>
+                    <p class="fs-5">Have a glimps of some delicacies of Hungrybuzz</p>
+                </div>
+            </div>
+            <div class="imgs row justify-content-center mt-5 ">
+                <div class="col-12 col-md-6 col-lg-4 ">
+                    <div class="mb-3 overlayer position-relative">
+                        <img src="Assets/h1-500x500.jpg" alt="gallarey-image" class="img-fluid">
+                        <div class="position-absolute bottom-0 d-flex justify-content-between align-items-center w-100 px-4 py-3 opacity-0">
+                            <div>
+                                <h6 class="main-color">DRINKS</h6>
+                                <span class="text-white but-font h4">Coffee Dalgona</span>
+                            </div>
+                            <button class="text-white fs-3 border-0">+</button>
+                        </div>
+                    </div>
+                    <div class="mb-3 m-lg-0 overlayer position-relative">
+                        <img src="Assets/h3-500x500.jpg" alt="gallarey-image" class="img-fluid">
+                        <div class="position-absolute bottom-0 d-flex justify-content-between align-items-center w-100 px-4 py-3 opacity-0">
+                            <div>
+                                <h6 class="main-color">STEAK</h6>
+                                <span class="text-white but-font h4">Spaghetti</span>
+                            </div>
+                            <button class="text-white fs-3 border-0">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3 m-lg-0 overlayer position-relative">
+                    <img src="Assets/h2-500x1035.jpg" alt="gallarey-image" class="img-fluid">
+                    <div class="position-absolute bottom-0 d-flex justify-content-between align-items-center w-100 px-4 py-3 opacity-0">
+                        <div>
+                            <h6 class="main-color">SEAFOOD</h6>
+                            <span class="text-white but-font h4">Salmon With Tomato Sauce</span>
+                        </div>
+                        <button class="text-white fs-3 border-0">+</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="row m-0 ">
+                        <div class="mb-3 ms-lg-0 mb-lg-3 col-md-6 col-lg-12 p-0 pe-md-3 p-lg-0 overlayer position-relative">
+                            <img src="Assets/h4-500x500.jpg" alt="gallarey-image" class="img-fluid">
+                            <div class="position-absolute bottom-0 d-flex justify-content-between align-items-center w-100 px-4 py-3 opacity-0">
+                                <div>
+                                    <h6 class="main-color">DRINKS</h6>
+                                    <span class="text-white but-font h4">Coffee Bread</span>
+                                </div>
+                                <button class="text-white fs-3 border-0">+</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-12 p-0 ps-md-3 p-lg-0 overlayer position-relative">
+                            <img src="Assets/h5-500x500.jpg" alt="gallarey-image" class="img-fluid">
+                            <div class="position-absolute bottom-0 d-flex justify-content-between align-items-center w-100 px-4 py-3 opacity-0">
+                                <div>
+                                    <h6 class="main-color">STEAK</h6>
+                                    <span class="text-white but-font h4">Beef Steak</span>
+                                </div>
+                                <button class="text-white fs-3 border-0">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="ImgSlider" class="ImgSlider position-fixed w-100 h-100 top-0 start-0  justify-content-center">
+        <div id="closeImgSlider" class="close position-absolute text-white d-flex justify-content-center align-items-center"><span>|</span><span>|</span></div>
+        <div id="carouselExample" class="carousel slide h-100 w-100">
+            <div class="carousel-inner w-50 h-100 m-auto d-flex align-items-center">
+                <div class="carousel-item active">
+                    <img src="Assets/h1-500x500.jpg" class="d-block " alt="Food Image">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/h2-500x1035.jpg" class="d-block" alt="Food Image">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/h3-500x500.jpg" class="d-block " alt="Food Image">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/h4-500x500.jpg" class="d-block " alt="Food Image">
+                </div>
+                <div class="carousel-item">
+                    <img src="Assets/h5-500x500.jpg" class="d-block" alt="Food Image">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section class="customer-opinion">
+        <div class="container">
+            <div id="carouselExampleAutoplaying-2" class="carousel opacity-0 slide " data-bs-ride="carousel">
+                <div class="carousel-inner position-relative">
+                    <h2 class="text-white position-absolute top-0 mx-auto text-center start-50 translate-middle-x opacity-25 fst-italic">You said about us</h2>
+                    <div class="carousel-item active" data-bs-interval="3000" >
+                        <div class="position-relative mx-auto my-4 img-holder rounded-circle" >
+                            <i class="fa-solid fa-quote-left main-color position-absolute fs-1"></i>
+                            <img src="Assets/img-single5-110x110-1.jpg" class="img-fluid rounded-circle" alt="reviewer-1">
+                        </div>
+                        <div class="carousel-caption d-block">
+                            <div class="my-3 mx-auto">
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                            </div>
+                            <p class="but-font italic fs-5">I have to say, I enjoyed every single bite of the meal in Hungrybuzz. I had a 3 course meal, with a couple of beers. Considering the quality, the price is reasonable. Ideal for those who want a romantic night out. There was also plenty of room for bigger groups.</p>
+                            <h5 class="text-white sup-head-font fs-1">Kim Lee</h5>
+                            <span class="main-color but-font">Korea</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="position-relative img-holder rounded-circle mx-auto my-4" >
+                            <i class="fa-solid fa-quote-left main-color position-absolute fs-1"></i>
+                            <img src="Assets/img-user1.jpg" class="img-fluid rounded-circle" alt="reviewer-1">
+                        </div>
+                        <div class="carousel-caption d-block">
+                            <div class="my-3 mx-auto">
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                            </div>
+                            <p class="but-font italic fs-5">First time in Hungrybuzz and YOU have to go! It's the cutest little spot with amazing food. The Foie Gras is to die for. IT WAS FIRE!! The service we received was so amazing and we will definitely be back again. They made us feel welcomed and gave us an amazing experience.</p>
+                            <h5 class="text-white sup-head-font fs-1">Frederick S. Eastland</h5>
+                            <span class="main-color but-font">California</span>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <div class="position-relative mx-auto my-4 img-holder rounded-circle" >
+                            <i class="fa-solid fa-quote-left main-color position-absolute fs-1"></i>
+                            <img src="Assets/reviewer1.png" class="img-fluid rounded-circle" alt="reviewer-1">
+                        </div>
+                        <div class="carousel-caption d-block">
+                            <div class="my-3 mx-auto">
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                                <i class="fa-solid fa-star main-color"></i>
+                            </div>
+                            <p class="but-font italic fs-5">When we think about celebrations, Hungrybuzz is always our first choice and it never disappoints. From appetizers to desserts, the quality and taste of everything was outstanding, my Steak, Foie Gras was possibly the best meal I have ever been served. Very professional service. 10/10</p>
+                            <h5 class="text-white sup-head-font fs-1">Christopher Nil</h5>
+                            <span class="main-color but-font">California</span>
+                        </div>
+                </div>
+                <button class="carousel-control-prev d-none d-md-block opacity-100" type="button" data-bs-target="#carouselExampleAutoplaying-2" data-bs-slide="prev">
+                    <div class="border-1 border rounded-circle d-flex justify-content-center align-items-center customer-opinion-btn"><i class="fa-solid fa-chevron-left"></i></div>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next d-none d-md-block opacity-100" type="button" data-bs-target="#carouselExampleAutoplaying-2" data-bs-slide="next">
+                    <div class="border-1 border rounded-circle d-flex justify-content-center align-items-center customer-opinion-btn"><i class="fa-solid fa-chevron-right"></i></div>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="class" class="class opacity-0">
+        <div class="container">
+            <div class="w-75">
+                <div class="classIcon mb-4 "><i class="fa-solid fa-cake-candles text-white"></i></div>
+                <div class="classContant">
+                    <h2 class="text-white sup-head-font mb-4">Special Baking Class @Sunday 9.00am</h2>
+                    <p class="text-white sup-head-font italic fs-3 mb-5">Famous Bakers from around the worls will take cooking workshop. Si its an opportunity for you to join & learn culnery Arts. And make delicious food in your kitchen</p>
+                    <div class="w-25 outerEffect-1 m-lg-0 position-relative">
+                        <button class="position-relative w-100 p-2 p-md-3 custom-btn outerEffetc-2 but-font text-white">Join Baking Class</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <section class="blogs">
+        <div class="container">
+            <div class="sub-head text-center animateSubHead">
+                <div class="my-2"><img src="Assets/moustache.png" alt="moustache"></div>
+                <h2 class="text-white h2-custome">Latest Food Blogs</h2>
+                <p>Book a table in advance to enjoy your time with friends & Family</p>
+            </div>
+            <div id="shiftedBlogsPaernt" class="overflow-hidden py-5 shiftedBlogsPaernt position-relative">
+                <div id="shiftedBlogs" class="DraggblogSection row justify-content-center align-items-center flex-nowrap z-2">
+                    <div class="single-blog position-relative z-1">
+                        <div class="overlayerBlogs position-absolute w-100 h-100 z-2 bg-transparent"></div>
+                        <div><img src="Assets/tip2-913x846.jpg" alt="bolg-img-1" class="img-fluid"></div>
+                        <div class="blog-contant my-3">
+                            <div class="main-color but-font fst-italic z-3 position-relative"><a href="" class="main-color text-decoration-none">Tips</a>,  By  <a href="" class="main-color text-decoration-none">Rachel Moor</a></div>
+                            <h3 class="sup-head-font fw-bold fs-2 my-2 z-3 position-relative"><a href="" class="text-white text-decoration-none">Let's Have Drink tonight</a></h3>
+                            <p class="but-font"> Food has the remarkable ability to transport us to different time periods, allowing us to taste history and experience the flavors that have shaped civilizations.</p>
+                            <div class="seeMore z-3 position-relative"><a href="" class=" text-decoration-none sup-head-font fw-bolder fs-5 text-uppercase"><span class="d-inline-block">see</span> <span class="d-inline-block">more</span></a></div>
+                        </div>
+                    </div>
+                    <div class="single-blog position-relative z-1">
+                        <div class="overlayerBlogs position-absolute w-100 h-100 z-2 bg-transparent"></div>
+                        <div><img src="Assets/tip3-913x845.jpg" alt="bolg-img-2" class="img-fluid"></div>
+                        <div class="blog-contant my-3">
+                            <div class="main-color but-font fst-italic z-3 position-relative"><a href="" class="main-color text-decoration-none">Tips</a>,  By  <a href="" class="main-color text-decoration-none">Rachel Moor</a></div>
+                            <h3 class="sup-head-font fw-bold fs-2 my-2 z-3 position-relative"><a href="" class="text-white text-decoration-none">Let's Have Drink tonight</a></h3>
+                            <p class="but-font"> Food has the remarkable ability to transport us to different time periods, allowing us to taste history and experience the flavors that have shaped civilizations.</p>
+                            <div class="seeMore z-3 position-relative"><a href="" class=" text-decoration-none sup-head-font fw-bolder fs-5 text-uppercase"><span class="d-inline-block">see</span> <span class="d-inline-block">more</span></a></div>
+                        </div>
+                    </div>
+                    <div class="single-blog position-relative z-1">
+                        <div class="overlayerBlogs position-absolute w-100 h-100 z-2 bg-transparent"></div>
+                        <div><img src="Assets/tip4-913x845.jpg" alt="bolg-img-3" class="img-fluid"></div>
+                        <div class="blog-contant my-3">
+                            <div class="main-color but-font fst-italic z-3 position-relative"><a href="" class="main-color text-decoration-none">Tips</a>,  By  <a href="" class="main-color text-decoration-none">Rachel Moor</a></div>
+                            <h3 class="sup-head-font fw-bold fs-2 my-2 z-3 position-relative"><a href="" class="text-white text-decoration-none">Let's Have Drink tonight</a></h3>
+                            <p class="but-font"> Food has the remarkable ability to transport us to different time periods, allowing us to taste history and experience the flavors that have shaped civilizations.</p>
+                            <div class="seeMore z-3 position-relative"><a href="" class=" text-decoration-none sup-head-font fw-bolder fs-5 text-uppercase"><span class="d-inline-block">see</span> <span class="d-inline-block">more</span></a></div>
+                        </div>
+                    </div>
+                    <div class="single-blog position-relative z-1">
+                        <div class="overlayerBlogs position-absolute w-100 h-100 z-2 bg-transparent"></div>
+                        <div><img src="Assets/tip5-913x845.jpg" alt="bolg-img-4" class="img-fluid"></div>
+                        <div class="blog-contant my-3">
+                            <div class="main-color but-font fst-italic z-3 position-relative"><a href="" class="main-color text-decoration-none">Tips</a>,  By  <a href="" class="main-color text-decoration-none">Rachel Moor</a></div>
+                            <h3 class="sup-head-font fw-bold fs-2 my-2 z-3 position-relative"><a href="" class="text-white text-decoration-none">Let's Have Drink tonight</a></h3>
+                            <p class="but-font"> Food has the remarkable ability to transport us to different time periods, allowing us to taste history and experience the flavors that have shaped civilizations.</p>
+                            <div class="seeMore z-3 position-relative"><a href="" class=" text-decoration-none sup-head-font fw-bolder fs-5 text-uppercase"><span class="d-inline-block">see</span> <span class="d-inline-block">more</span></a></div>
+                        </div>
+                    </div>
+                    <div class="single-blog position-relative z-1">
+                        <div class="overlayerBlogs position-absolute w-100 h-100 z-2 bg-transparent"></div>
+                        <div><img src="Assets/tip6-913x845.jpg" alt="bolg-img-5" class="img-fluid"></div>
+                        <div class="blog-contant my-3">
+                            <div class="main-color but-font fst-italic z-3 position-relative"><a href="" class="main-color text-decoration-none">Tips</a>,  By  <a href="" class="main-color text-decoration-none">Rachel Moor</a></div>
+                            <h3 class="sup-head-font fw-bold fs-2 my-2 z-3 position-relative"><a href="" class="text-white text-decoration-none">Let's Have Drink tonight</a></h3>
+                            <p class="but-font"> Food has the remarkable ability to transport us to different time periods, allowing us to taste history and experience the flavors that have shaped civilizations.</p>
+                            <div class="seeMore z-3 position-relative"><a href="" class=" text-decoration-none sup-head-font fw-bolder fs-5 text-uppercase"><span class="d-inline-block">see</span> <span class="d-inline-block">more</span></a></div>
+                        </div>
+                    </div>
+                    <div class="single-blog position-relative z-1">
+                        <div class="overlayerBlogs position-absolute w-100 h-100 z-2 bg-transparent"></div>
+                        <div><img src="Assets/tip7-913x845.jpg" alt="bolg-img-6" class="img-fluid"></div>
+                        <div class="blog-contant my-3">
+                            <div class="main-color but-font fst-italic z-3 position-relative"><a href="" class="main-color text-decoration-none">Tips</a>,  By  <a href="" class="main-color text-decoration-none">Rachel Moor</a></div>
+                            <h3 class="sup-head-font fw-bold fs-2 my-2 z-3 position-relative"><a href="" class="text-white text-decoration-none">Let's Have Drink tonight</a></h3>
+                            <p class="but-font"> Food has the remarkable ability to transport us to different time periods, allowing us to taste history and experience the flavors that have shaped civilizations.</p>
+                            <div class="seeMore z-3 position-relative"><a href="" class=" text-decoration-none sup-head-font fw-bolder fs-5 text-uppercase"><span class="d-inline-block">see</span> <span class="d-inline-block">more</span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hours">
+        <div class="mx-auto mb-3 text-center"><img src="Assets/Boarder.png" alt="upborder" class="img-fluid"></div>
+        <div class="m-auto p-5 border border-2">
+            <h4 class="main-color text-center but-font ">OPENING HOURS</h4>
+            <div class="my-5">
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <h4 class="fs-5 d-inline pe-3 but-font fs-6">Sunday</h4>
+                    <span class="flex-grow-1 line pe-3  bg-black"></span>
+                    <span class="ps-3 pe-3 sup-head-font">8.oo -23.00</span>
+                </div>
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <h4 class="fs-5 d-inline pe-3 but-font fs-6">Monday</h4>
+                    <span class="flex-grow-1 line pe-3  bg-black"></span>
+                    <span class="ps-3 pe-3 sup-head-font">8.oo -23.00</span>
+                </div>
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <h4 class="fs-5 d-inline pe-3 but-font fs-6">Tuesday</h4>
+                    <span class="flex-grow-1 line pe-3  bg-black"></span>
+                    <span class="ps-3 pe-3 sup-head-font">8.oo -23.00</span>
+                </div>
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <h4 class="fs-5 d-inline pe-3 but-font fs-6">Wednesday</h4>
+                    <span class="flex-grow-1 line pe-3  bg-black"></span>
+                    <span class="ps-3 pe-3 sup-head-font">8.oo -23.00</span>
+                </div>
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <h4 class="fs-5 d-inline pe-3 but-font fs-6">Thursday</h4>
+                    <span class="flex-grow-1 line pe-3  bg-black"></span>
+                    <span class="ps-3 pe-3 sup-head-font">8.oo -23.00</span>
+                </div>
+                <div class="d-flex justify-content-center align-items-center my-3">
+                    <h4 class="fs-5 d-inline pe-3 but-font fs-6">Friday, Saturday</h4>
+                    <span class="flex-grow-1 line pe-3  bg-black"></span>
+                    <span class="ps-3 pe-3 sup-head-font">Closed</span>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto mt-3 text-center"><img src="Assets/Boarder.png" alt="downborder" class="img-fluid"></div>
+    </section>
+    <section class="icons">
+        <div class="container">
+            <div id="shiftedIconsParent" class="overflow-hidden">
+                <div id="shiftedIcson" class="row justify-content-center align-items-center shiftedSection flex-nowrap">
+                    <div class="border border-1 text-center col-3"><img src="Assets/5.png" alt="coffee" class="img-fluid opacity-25"></div>
+                    <div class="border border-1 text-center col-3"><img src="Assets/client_2_2.png" alt="pizza" class="img-fluid opacity-25"></div>
+                    <div class="border border-1 text-center col-3"> <img src="Assets/client_3_2.png" alt="resturant" class="img-fluid opacity-25"></div>
+                    <div class="border border-1 text-center col-3"><img src="Assets/client_4_2.png" alt="Chef logo" class="img-fluid opacity-25"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="delvery">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12 py-5">
+                    <div class="">
+                        <h2 class="text-white h2-custome fs-1">Safe Food Take Out</h2>
+                        <p class="main-color fst-italic fs-5">We are open for anu order Online</p>
+                        <p class="my-5 text-white but-font">Culinary artists often take inspiration from various cuisines, cultural traditions, and personal experiences to create their own signature dishes.</p>
+                    </div>
+                    <div class="bg-white row py-4 phoneHolder">
+                        <div class="col-3 d-flex justify-content-center align-items-center animatePhone"><i class="fa-solid fa-phone main-color "></i></div>
+                        <div class="col-9 text-center">
+                            <span class="fw-normal callUs  ">CALL US TO ORDER ONLINE</span>
+                            <span class="fw-bolder fs-5 d-block">+0888 . 1234 . 5699</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offset-lg-1 col-lg-7 col-12">
+                    <img src="Assets/image2.jpg" alt="about-image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map">
+        <div class="container position-relative">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d22971.82793263448!2d77.68774008113498!3d12.925976572025343!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1693753565826!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+            <div class="sendMessage position-absolute p-lg-5 p-md-3 p-1">
+                <h2 class="text-black sup-head-font">Keep in Touch</h2>
+                <p class="main-color italic">Send us mail if you have anything to suggest</p>
+                <form action="" class="d-flex flex-column justify-content-center">
+                    <input type="text" name="name" placeholder="Your Name" required class="my-3">
+                    <input type="email" name="email" placeholder="Your Email Address..." required class="my-3">
+                    <textarea name="message" id=""  cols="" rows="6" placeholder="Your Massage" required class="my-3"></textarea>
+                    <button type="submit" class="w-50 text-white border-0 position-relative custom-btn btn-insideEffect but-font py-3">Send Mail</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer-contant py-5">
+                <div class="col-12 col-md-6 col-lg-4 py-lg-0 py-4">
+                    <h5 class="sup-head-font text-white mb-4 fs-3">Latest News</h5>
+                    <div class="mt-3">
+                        <span class="main-color but-font d-block">June 8, 2023</span>
+                        <a href="#" class="sup-head-font text-white text-decoration-none fs-4">Feast and Flavor: A Culinary Journey</a>
+                    </div>
+                    <div class="mt-3">
+                        <span class="main-color but-font d-block">June 8, 2023</span>
+                        <a href="#" class="sup-head-font text-white text-decoration-none fs-4">Cooking innovation process</a>
+                    </div>
+                    <div class="mt-3">
+                        <span class="main-color but-font d-block">June 8, 2023</span>
+                        <a href="#" class="sup-head-font text-white text-decoration-none fs-4">Our new speggetti recipe</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 py-lg-0 py-4">
+                    <div class="text-center"><img src="Assets/logo2.svg.png" alt="logo2" class="img-fluid"></div>
+                    <p class="sup-head-font text-white fs-4 text-center my-4">Welcome to Hungrybuzz, where culinary delights await to satisfy your cravings.</p>
+                    <div class="text-center">
+                        <a href="https://www.facebook.com/" target="_self" class="position-relative text-decoration-none socail-link mx-3 my-3 d-inline-block">
+                            <span class="fw-bolder">facebook</span>
+                            <span class="sup-head-font position-absolute top-50 start-50 translate-middle fw-bolder">FB</span>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_self" class="position-relative text-decoration-none socail-link mx-3 my-3 d-inline-block">
+                            <span class="fw-bolder">YouTube</span>
+                            <span class="sup-head-font position-absolute top-50 start-50 translate-middle fw-bolder">YT</span>
+                        </a>
+                        <a href="https://www.instagram.com/?hl=en" target="_self" class="position-relative text-decoration-none socail-link mx-3 my-3 d-inline-block">
+                            <span class="fw-bolder">instgram</span>
+                            <span class="sup-head-font position-absolute top-50 start-50 translate-middle fw-bolder">IN</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 py-lg-0 py-4">
+                    <h5 class="sup-head-font text-white mb-4 fs-3">Payment Procedure</h5>
+                    <p class="sup-head-font text-white fs-5 my-4">We accept various payment methods, including cash, major credit cards, and mobile payment options.</p>
+                    <p class="sup-head-font text-white fs-5 my-4">We offer four convenient payment methods to suit.</p>
+                    <div class="d-flex justify-content-around">
+                        <div><img src="Assets/pay1.png" alt="payCard" class="img-fluid"></div>
+                        <div><img src="Assets/pay2.png" alt="payCard" class="img-fluid"></div>
+                        <div><img src="Assets/pay3.png" alt="payCard" class="img-fluid"></div>
+                        <div><img src="Assets/pay4.png" alt="payCard" class="img-fluid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="py-4 text-center btn-font italic">
+            © All rights reserved to <a href="https://themeforest.net/user/bravis-themes/portfolio" target="_blank" class="text-decoration-none ">Bravis-Themes</a>
+        </p>
+    </footer>
+    <div id="upParent" class="upParent position-fixed rounded-circle bg-white"><div class="up rounded-circle position-absolute top-50 start-50 translate-middle fs-5 fw-bolder "><i class="fa-solid fa-chevron-up"></i></div></div>
+    <script src="js/Myjs/draggableSlider.js"></script>
+    <script src="js/Myjs/upButton.js"></script>
+    <script src="js/Myjs/setInmation.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/Myjs/globaleScript.js"></script>
+    <script src="js/Myjs/index.js"></script>
+    <script src="js/Myjs/cart.js"></script>
+</body>
+</html>

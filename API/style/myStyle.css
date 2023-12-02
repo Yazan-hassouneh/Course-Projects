@@ -1,0 +1,15 @@
+.navContainer {
+    background-color: #212529;
+}
+.head {
+    padding: 100px 0px;
+
+}
+.img {
+    height: 240px !important;
+}
+.imgInfo,
+.img {
+    object-fit: cover !important;
+
+}   

@@ -1,0 +1,1 @@
+let closeContact=document.getElementById("close"),opeanContact=document.getElementById("opean"),Contact=document.querySelector(".reserveTable");opeanContact.onclick=()=>{Contact.classList.add("show")},closeContact.onclick=()=>{Contact.classList.remove("show")};

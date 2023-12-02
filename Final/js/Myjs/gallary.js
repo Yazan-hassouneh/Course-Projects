@@ -1,0 +1,1 @@
+let opeaImg=document.querySelectorAll(".tab-content button"),closeImg=document.getElementById("closeImgSlider"),slider=document.getElementById("ImgSlider");opeaImg.forEach(e=>{e.addEventListener("click",()=>{slider.classList.add("show")})}),closeImg.onclick=()=>{slider.classList.remove("show")};
